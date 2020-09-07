@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import LyricsProvider from "./context/LyricsContext";
+import Container from "react-bootstrap/Container";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Lyrics from "./components/Lyrics";
 function App() {
+  //apikey
+
+  // const apikey = "770503fb5478377cd69439b905540b0c";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LyricsProvider>
+      <Container>
+        <Jumbotron>
+          <h1>Busca tu lyrics</h1>
+          <div className="col-12">
+            <Lyrics />
+          </div>
+        </Jumbotron>
+      </Container>
+    </LyricsProvider>
   );
 }
 
