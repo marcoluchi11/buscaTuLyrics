@@ -88,10 +88,10 @@ const Lyrics = () => {
         />
       </form>
       <div className="row">
-        <div className="col-6">
+        <div className="col-12 col-md-6">
           <Cancion error={error} letra={lyrics} letraNombre={buscar.cancion} />
         </div>
-        <div className="col-6">
+        <div className="col-12 col-md-6">
           <Info info={info} />
         </div>
       </div>
